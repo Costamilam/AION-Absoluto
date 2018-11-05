@@ -1,9 +1,18 @@
 # AION Absoluto
 
-Site estático do hotel AION Absoluto com:
+Site estático do hotel AION Absoluto
 
- - Informações do empreendimento
- - Imagens internas e vídeo externo com vista do terraço do empreendimento
- - Notícias sobre o investimento em outros veículos de comunicação
+http://aionabsoluto.com.br
+
+**Recursos**
+
+ - Informações sobre o conceito absoluto
+ - Informações do empreendimento e dos apartamentos
+ - Infraestrutura disponibilizada no hotel
+ - Imagens dos espaços internos
+ - Vídeo com vista do terraço do hotel
+ - Localização do hotel
+ - Notícias sobre o investimento em diversos veículos de comunicação
  - Formulário de contato
-
+ - Informações de contato
+ - Chat em tempo real
