@@ -1,0 +1,95 @@
+body {
+	padding: 0;
+	margin: 0;
+	perspective: 900px;
+	perspective-origin: 100% 100%;
+}
+
+@keyframes rotation {
+    from {
+		transform: translateZ(-2000px) rotateY(0turn);
+	}
+    to {
+		transform: translateZ(-2000px) rotateY(1turn);
+	}
+}
+body > div {
+	height: calc(11 * 15vmin);
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+    animation: rotation 5s infinite;
+}
+body > div > div {
+	width: 60vmin;
+	height: calc(11 * 15vmin);
+	position: absolute;
+	background-color: black;
+}
+#front {
+	background-color: skyblue;
+	padding: 0 20vmin;
+	transform: rotateY(0deg) translateZ(30vmin);
+}
+#back {
+	transform: rotateY(180deg) translate3d(-20vmin, 0vmin, 30vmin) scaleX(1.7);
+}
+#right {
+	transform: rotateY(90deg) translateZ(70vmin);
+}
+#left {
+	transform: rotateY(-90deg) translateZ(30vmin);
+}
+#top {
+	height: 100vmin;
+	transform: rotateX(90deg) translateZ(0);
+}
+#bottom {
+	height: 100vmin;
+	transform: rotateX(-90deg) translateZ(0);
+}
+
+div.left {
+	float: left;
+}
+div.right {
+	float: right;
+}
+div.col1 {
+	width: 15vmin;
+}
+div.col2 {
+	width: 30vmin;
+}
+div.col3 {
+	width: 45vmin;
+}
+div.row1 {
+	height: 15vmin;
+}
+div.row2 {
+	height: 30vmin;
+}
+div.row3 {
+	height: 45vmin;
+}
+
+div.top-1 {
+	margin-top: -15vmin;
+}
+div.left1 {
+	margin-left: 15vmin;
+}
+
+.red {
+	background-color: #eedfd1;
+}
+.green {
+	background-color: #ceffbb;
+}
+.yellow {
+	background-color: #e4ffc6;
+}
+.blue {
+	background-color: #c2fce2;
+}

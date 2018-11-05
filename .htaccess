@@ -1,0 +1,8 @@
+RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteEngine on
+<Files *.pdf>
+    Order Deny,Allow
+    Deny from All
+</Files>

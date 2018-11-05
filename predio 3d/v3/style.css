@@ -1,0 +1,99 @@
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 0;
+}
+
+.model {
+	display: flex;
+	justify-content: space-between;
+}
+
+.webgl, .info {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.info-title {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 30vh;
+   	transition: margin-top 1s ease-in-out;
+}
+.info-content {
+	transition: display 1s ease-in-out;
+	display: none;
+	width: 70%;
+	height: 50%;
+	margin: 10% 10% 10% 10%;
+	padding: 5%;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.info-content h2 {
+	text-align: center;
+	margin-bottom: 10%;
+}
+.info-content p {
+	margin: 5% 0;
+}
+.info-content button {
+	background-color: transparent;
+	opacity: 0.5;
+	font-weight: bolder;
+	border: none;
+	outline: none;
+	align-self: flex-end;
+	position: absolute;
+	font-size: 1.5rem;
+}
+
+canvas {
+	height: 85vh !important;
+}
+.rotation {
+	height: 10vh;
+	width: 80%;
+	margin: 2.5vh 10%;
+	display: flex;
+	order: 2;
+}
+.rotation span {
+	flex: 1 1 0;
+}
+.rotation i {
+    border: solid black;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+	width: 5vh;
+   	height: 5vh;
+}
+.rotation .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.rotation .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+@media all and (max-width: 650px) {
+	.model {
+		flex-direction: column;
+	}
+	.info {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 80vh;
+	}
+	.info-title {
+		display: none;
+	}
+	.info-content {
+		height: 80%;
+	}
+}

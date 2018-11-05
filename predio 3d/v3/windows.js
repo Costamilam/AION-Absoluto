@@ -1,0 +1,382 @@
+/* Descrição
+    w = largura
+    h = altura
+    x = posição x
+    y = posição y
+    z = posição z
+    color: cor de fundo
+        |- 0xc2fce2 = azul
+        |- 0xceffbb = verde
+        |- 0xe4ffc6 = amarelo
+        |- 0xeedfd1 = vermelho
+*/
+
+// Lista de janelas
+const windows = [{
+    x: -1.5,
+    y: 15,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -0.5,
+    y: 15,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: 0.5,
+    y: 15,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: 1.5,
+    y: 15,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: -1.5,
+    y: 14,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -0.5,
+    y: 14,
+    z: 3.01,
+    color: 0xeedfd1
+}, {
+    x: 0.5,
+    y: 14,
+    z: 3.01,
+    color: 0xeedfd1
+}, {
+    x: 1.5,
+    y: 14,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: -1.5,
+    y: 13,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: -0.5,
+    y: 13,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: 0.5,
+    y: 13,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: 1.5,
+    y: 13,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: -1.5,
+    y: 12,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -0.5,
+    y: 12,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: 0.5,
+    y: 12,
+    z: 3.01,
+    color: 0xe4ffc6
+}, {
+    x: 1.5,
+    y: 12,
+    z: 3.25,
+    color: 0xc2fce2
+}, {
+    x: -1.5,
+    y: 11,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -0.5,
+    y: 11,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: 0.5,
+    y: 11,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: 1.5,
+    y: 11,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: -1.5,
+    y: 10,
+    z: 3.01,
+    color: 0xe4ffc6
+}, {
+    x: -0.5,
+    y: 10,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: 0.5,
+    y: 10,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: 1.5,
+    y: 10,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: -1.5,
+    y: 9,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: -0.5,
+    y: 9,
+    z: 3.25,
+    color: 0xc2fce2
+}, {
+    x: 0.5,
+    y: 9,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: 1.5,
+    y: 9,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -1.5,
+    y: 8,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: -0.5,
+    y: 8,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: 0.5,
+    y: 8,
+    z: 3.25,
+    color: 0xe4ffc6
+}, {
+    x: 1.5,
+    y: 8,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -1.5,
+    y: 7,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: -0.5,
+    y: 7,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: 0.5,
+    y: 7,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: 1.5,
+    y: 7,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: -1.5,
+    y: 6,
+    z: 3.01,
+    color: 0xe4ffc6
+}, {
+    x: -0.5,
+    y: 6,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: 0.5,
+    y: 6,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: 1.5,
+    y: 6,
+    z: 3.25,
+    color: 0xeedfd1
+}, {
+    x: -1.5,
+    y: 5,
+    z: 3.01,
+    color: 0xe4ffc6
+}, {
+    x: -0.5,
+    y: 5,
+    z: 3.01,
+    color: 0xc2fce2
+}, {
+    x: 0.5,
+    y: 5,
+    z: 3.01,
+    color: 0xceffbb
+}, {
+    x: 1.5,
+    y: 5,
+    z: 3.01,
+    color: 0xceffbb
+}];
+
+const border = [{
+    w: 1,
+    h: 2,
+    x: -1.5,
+    y: 14.5
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 15
+}, {
+    w: 1,
+    h: 1,
+    x: 0.5,
+    y: 15
+}, {
+    w: 1,
+    h: 1,
+    x: 1.5,
+    y: 15
+}, {
+    w: 2,
+    h: 1,
+    x: 0,
+    y: 14
+}, {
+    w: 1,
+    h: 2,
+    x: 1.5,
+    y: 13.5
+}, {
+    w: 1,
+    h: 1,
+    x: -1.5,
+    y: 13
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 13
+}, {
+    w: 1,
+    h: 1,
+    x: 0.5,
+    y: 13
+}, {
+    w: 2,
+    h: 2,
+    x: -1,
+    y: 11.5
+}, {
+    w: 1,
+    h: 1,
+    x: 0.5,
+    y: 12
+}, {
+    w: 1,
+    h: 1,
+    x: 1.5,
+    y: 12
+}, {
+    w: 2,
+    h: 1,
+    x: 1,
+    y: 11
+}, {
+    w: 1,
+    h: 1,
+    x: -1.5,
+    y: 10
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 10
+}, {
+    w: 1,
+    h: 2,
+    x: 0.5,
+    y: 9.5
+}, {
+    w: 1,
+    h: 1,
+    x: 1.5,
+    y: 10
+}, {
+    w: 1,
+    h: 1,
+    x: -1.5,
+    y: 9
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 9
+}, {
+    w: 1,
+    h: 3,
+    x: 1.5,
+    y: 8
+}, {
+    w: 3,
+    h: 1,
+    x: -0.5,
+    y: 8
+}, {
+    w: 1,
+    h: 1,
+    x: -1.5,
+    y: 7
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 7
+}, {
+    w: 1,
+    h: 1,
+    x: 0.5,
+    y: 7
+}, {
+    w: 1,
+    h: 2,
+    x: -1.5,
+    y: 5.5
+}, {
+    w: 3,
+    h: 1,
+    x: 0.5,
+    y: 6
+}, {
+    w: 1,
+    h: 1,
+    x: -0.5,
+    y: 5
+}, {
+    w: 1,
+    h: 1,
+    x: 0.5,
+    y: 5
+}, {
+    w: 1,
+    h: 1,
+    x: 1.5,
+    y: 5
+}];
